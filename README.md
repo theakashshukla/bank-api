@@ -32,6 +32,7 @@ Before you begin, ensure you have met the following requirements:
 4. **Activate the virtual environment:**
 
    - On Windows:
+
      ```shell
      venv\Scripts\activate
      ```
@@ -45,6 +46,12 @@ Before you begin, ensure you have met the following requirements:
 
    ```shell
    pip install -r requirements.txt
+   ```
+
+   OR
+
+   ```shell
+   pip install Flask Flask-GraphQL graphene
    ```
 
 ## Usage
@@ -62,6 +69,7 @@ Before you begin, ensure you have met the following requirements:
 3. **Use the GraphiQL interface to execute GraphQL queries to retrieve bank branch data.**
 
    Sample GraphQL Query:
+
    ```graphql
    query {
      branches {
@@ -93,4 +101,7 @@ ifsc,bank_id,branch,address,city,district,state,bank_name
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+```
+
 ```
