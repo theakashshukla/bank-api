@@ -1,20 +1,96 @@
-Set Up Your Virtual Environment:
+# Bank Branches API
 
-python -m venv venv
+This project is a Python web API service built with Flask that supports GraphQL queries for retrieving bank branch data from a CSV file.
 
+## Prerequisites
 
-Activate the virtual environment:
+Before you begin, ensure you have met the following requirements:
 
-On Windows:
+- Python (version 3.6 or higher) installed on your system.
+- Python virtual environment set up.
 
-venv\Scripts\activate
+## Installation
 
+1. **Clone this repository to your local machine:**
 
-On macOS and Linux:
+   ```shell
+   git clone https://github.com/theakashshukla/bank-api.git
+   ```
 
-bash
-source venv/bin/activate
+2. **Navigate to the project folder:**
 
-Install Required Packages:
+   ```shell
+   cd bank-api
+   ```
 
-pip install Flask Flask-GraphQL graphene
+3. **Create a virtual environment:**
+
+   ```shell
+   python -m venv venv
+   ```
+
+4. **Activate the virtual environment:**
+
+   - On Windows:
+     ```shell
+     venv\Scripts\activate
+     ```
+
+   - On macOS and Linux:
+     ```shell
+     source venv/bin/activate
+     ```
+
+5. **Install the required Python packages:**
+
+   ```shell
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+1. **Start the Flask app:**
+
+   ```shell
+   python app.py
+   ```
+
+   The app will run at `http://localhost:5000`.
+
+2. **Open a web browser and navigate to `http://localhost:5000/gql`.** This will open the GraphiQL interface.
+
+3. **Use the GraphiQL interface to execute GraphQL queries to retrieve bank branch data.**
+
+   Sample GraphQL Query:
+   ```graphql
+   query {
+     branches {
+       ifsc
+       branch
+       bank
+     }
+   }
+   ```
+
+   Press the "Play" button to execute the query and view the results.
+
+## Data Loading
+
+The data loading logic in `app.py` reads data from the `bank_branches.csv` file. Ensure that the CSV file is located in the same directory as `app.py` and follows the correct format:
+
+```
+ifsc,bank_id,branch,address,city,district,state,bank_name
+```
+
+## Contributing
+
+- Fork the repository.
+- Create a new branch for your feature or bug fix.
+- Make your changes and commit them.
+- Push your changes to your fork.
+- Submit a pull request to the original repository.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
