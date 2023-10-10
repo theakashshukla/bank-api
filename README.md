@@ -2,6 +2,9 @@
 
 This project is a Python web API service built with Flask that supports GraphQL queries for retrieving bank branch data from a CSV file.
 
+![image](https://github.com/theakashshukla/bank-api/assets/49320497/e6351309-86ae-4ac8-a5b6-89eec55184f1)
+
+
 ## API Purpose
 
 The purpose of this API is to provide access to information about bank branches. It allows users to query and retrieve data about various bank branches using GraphQL queries.
